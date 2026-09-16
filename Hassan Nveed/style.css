@@ -1,0 +1,484 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f0f0f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* Background setup */
+    background-image: url('photo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #121212;
+}
+
+/* ==========================================================================
+   Header & Typography
+   ========================================================================== */
+header {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+
+h1 {
+    color: bisque;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.subtitle {
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   Navigation Bar & Buttons
+   ========================================================================== */
+nav[aria-label="Main navigation"] {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+nav[aria-label="Main navigation"] a {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+nav[aria-label="Main navigation"] a:hover,
+nav[aria-label="Main navigation"] a:focus,
+nav[aria-label="Main navigation"] a.active {
+    background-color: #f1f0f0;
+    color: #121212;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   Main Content Layout & Glassmorphism Cards
+   ========================================================================== */
+main {
+    flex: 1;
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto 40px;
+}
+
+section {
+    background: rgba(18, 18, 18, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+h2 {
+    color: bisque;
+    border-bottom: 2px solid rgba(255, 228, 196, 0.3);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* Links inside sections */
+a {
+    color: #64b5f6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #90caf9;
+    text-decoration: underline;
+}
+
+/* Profile Image */
+.profile-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto 20px auto;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Skills List Styling */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 12px 18px;
+    border-radius: 6px;
+    border-left: 4px solid bisque;
+}
+
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card:last-child {
+    margin-bottom: 0;
+}
+/* Resume Page Styling */
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: bisque;
+  color: #121212;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 228, 196, 0.4);
+  text-decoration: none;
+}
+
+.pdf-container {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pdf-container iframe {
+  border: none;
+}
+
+/* footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 0.9rem;
+    color: #cccccc;
+} */
+ /* Footer Styles */
+footer {
+  text-align: center;
+  padding: 25px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-top: auto;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.footer-socials a {
+  color: #f0f0f0;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: bisque;
+  transform: translateY(-3px);
+}
+
+
+/* Typing effect with cursor that disappears immediately when done */
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid bisque; /* The cursor line */
+  width: 0;
+  animation: 
+    typeLetters 2.5s steps(23, end) forwards,
+    blinkCursor 0.6s step-end infinite,
+    hideCursor 0.1s 2.5s forwards; /* Triggers right at 2.5s when typing completes */
+}
+
+/* Expands text width */
+@keyframes typeLetters {
+  from { width: 0; }
+  to { width: 23ch; }
+}
+
+/* Blinks cursor while typing */
+@keyframes blinkCursor {
+  from, to { border-color: transparent; }
+  50% { border-color: bisque; }
+}
+
+/* Immediately removes cursor when typing finishes */
+@keyframes hideCursor {
+  to { border-right-color: transparent; }
+}
+
+/* About Page Grid & Cards Styling */
+.bio {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: bisque;
+}
+
+.about-card h3 {
+  color: bisque;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-card li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #dddddd;
+}
+
+/* Fixed Fullscreen Background Video */
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2; /* Keeps video behind everything */
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Semi-transparent Dark Overlay */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.65); /* Adjust opacity (0.65) to make text readable */
+  z-index: -1; /* Sits between video and your text */
+}
+
+/* to change my headings under ny name in index file  */
+
+/* Subtitle container setup - ensures center alignment */
+.subtitle {
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 1.8rem;
+}
+
+.typewriter-wrapper {
+  position: relative;
+  display: inline-block;
+  /* text-align: center; */
+}
+
+/* Base style for each cycling word */
+.typed-word {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid bisque; /* Cursor */
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centers each word dynamically regardless of length */
+  animation-duration: 13s;
+  animation-timing-function: steps(30, end);
+  animation-iteration-count: infinite;
+}
+
+/* Keep the first word in flow to reserve the container's height/spacing */
+.typed-word.word-1 {
+  position: relative; 
+  left: 0;
+  transform: none;
+  animation-name: typeAndDelete1;
+}
+
+.typed-word.word-2 {
+  animation-name: typeAndDelete2;
+}
+
+.typed-word.word-3 {
+  animation-name: typeAndDelete3;
+}
+
+/* --- Word 1: Software Engineer (18 chars) - Slower, natural typing speed --- */
+@keyframes typeAndDelete1 {
+  0%, 2% { width: 0; opacity: 1; }
+  25% { width: 18ch; opacity: 1; } /* Types out smoothly */
+  31% { width: 18ch; opacity: 1; } /* Pauses to read */
+  33% { width: 0; opacity: 1; }    /* Deletes backward */
+  34%, 100% { width: 0; opacity: 0; }
+}
+
+/* --- Word 2: Full Stack Web Developer (24 chars) - Adjusted timing so it's not rushed --- */
+@keyframes typeAndDelete2 {
+  0%, 34% { width: 0; opacity: 0; }
+  35% { opacity: 1; }
+  60% { width: 24ch; opacity: 1; } /* Types out at a steady pace */
+  66% { width: 18ch; opacity: 1; } /* Pauses */
+  68% { width: 0; opacity: 1; }    /* Deletes backward */
+  69%, 100% { width: 0; opacity: 0; }
+}
+
+/* --- Word 3: Entrepreneur (12 chars) --- */
+@keyframes typeAndDelete3 {
+  0%, 69% { width: 0; opacity: 0; }
+  70% { opacity: 1; }
+  90% { width: 12ch; opacity: 1; } /* Types out */
+  96% { width: 12ch; opacity: 1; } /* Pauses */
+  99% { width: 0; opacity: 1; }    /* Deletes backward */
+  100% { width: 0; opacity: 0; }
+}
+
+/* live the hi emoji  */
+/* Container to keep text and emoji locked together cleanly */
+.typing-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px; /* Controlled spacing between text and emoji */
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid bisque;
+  width: 0;
+  animation: 
+    typeLetters 2.5s steps(23, end) forwards,
+    blinkCursor 0.6s step-end infinite,
+    hideCursor 0.1s 2.5s forwards;
+}
+
+/* Keeps emoji hidden until typing finishes at 2.5s, then fades in and starts waving */
+.waving-hand {
+  display: inline-block;
+  opacity: 0;
+  animation: 
+    showEmoji 0.1s 2.5s forwards, 
+    waveHand 1.5s 2.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+  margin-left: -4px;
+}
+
+@keyframes showEmoji {
+  to { opacity: 1; }
+}
+
+@keyframes typeLetters {
+  from { width: 0; }
+  to { width: 23ch; }
+}
+
+@keyframes blinkCursor {
+  from, to { border-color: transparent; }
+  50% { border-color: bisque; }
+}
+
+@keyframes hideCursor {
+  to { border-right-color: transparent; }
+}
+
+@keyframes waveHand {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(14deg); }
+  40% { transform: rotate(-8deg); }
+  60% { transform: rotate(14deg); }
+  80% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
